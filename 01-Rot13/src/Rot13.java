@@ -1,12 +1,13 @@
 public class Rot13 {
-    public static char[] minuscules = "aàábcçdeèéfhiíìïjlmnñoòópqrstuúùüvwxyz".toCharArray();
-    public static char[] majuscules = "AÀÁBCÇDEÈÉFGHIÍÌÏJKLMNÑOÒÓPQRSTUÚÙÜVWXYZ".toCharArray();
+   
+    public static char[] minuscules = "aáàbcçdeéèfghiíìïjlmnñoóòpqrstuúùüvwxyz".toCharArray();
+    public static char[] majuscules = "AÁÀBCÇDEÉÈFGHIÍÌÏJKLMNÑOÓÒPQRSTUÚÙÜVWXYZ".toCharArray();
 
     public static char xifraChar(char c) {
         if (Character.isLetter(c)){
             if (Character.isLowerCase(c)) {
                 for (int i = 0; i < minuscules.length; i++) {
-                    if (c==minuscules[i]) {
+                    if (c == minuscules[i]) {
                         int posicio = i + 13;
                         if (posicio >= minuscules.length) {
                             posicio = posicio - minuscules.length;
@@ -17,7 +18,7 @@ public class Rot13 {
             }
             if (Character.isUpperCase(c)) {
                 for (int i = 0; i < majuscules.length; i++) {
-                    if (c==majuscules[i]) {
+                    if (c == majuscules[i]) {
                         int posicio = i + 13;
                         if (posicio >= majuscules.length) {
                             posicio = posicio - majuscules.length;
@@ -33,7 +34,7 @@ public class Rot13 {
         if (Character.isLetter(c)){
             if (Character.isLowerCase(c)) {
                 for (int i = 0; i < minuscules.length; i++) {
-                    if (c==minuscules[i]) {
+                    if (c == minuscules[i]) {
                         int posicio = i - 13;
                         if (posicio < 0) {
                             posicio = posicio + minuscules.length;
@@ -44,7 +45,7 @@ public class Rot13 {
             }
             if (Character.isUpperCase(c)) {
                 for (int i = 0; i < majuscules.length; i++) {
-                    if (c==majuscules[i]) {
+                    if (c == majuscules[i]) {
                         int posicio = i - 13;
                         if (posicio < 0) {
                             posicio = posicio + majuscules.length;
@@ -84,7 +85,7 @@ public class Rot13 {
         System.out.println("---------");
         System.out.println("IÏJ => " + desxifraRot13("IÏJ"));
         System.out.println("FGH => " + desxifraRot13("FGH"));
-        System.out.println("Ówúí, Ùà. líúmwb => " + desxifraRot13("Ówúí, Ùà. líúmwb"));
-        System.out.println("Zñàny, zñà bc aco òá? => " + desxifraRot13("Zñàny, zñà bc aco òá?"));
+        System.out.println("Òwúi, Ùá. jiúlwb => " + desxifraRot13("Òwúi, Ùá. jiúlwb"));
+        System.out.println("Známx, zná bc aco ñà? => " + desxifraRot13("Známx, zná bc aco ñà?"));
     }
 }
