@@ -1,6 +1,6 @@
 public class RotX {
  
-    public static char[] minuscules = "aáàbcçdeéèfghiíìïjlmnñoóòpqrstuúùüvwxyz".toCharArray();
+    public static char[] minuscules = "aáàbcçdeéèfghiíìïjklmnñoóòpqrstuúùüvwxyz".toCharArray();
     public static char[] majuscules = "AÁÀBCÇDEÉÈFGHIÍÌÏJKLMNÑOÓÒPQRSTUÚÙÜVWXYZ".toCharArray();
     
     // Utilitzem els mateixos metodes substituint el 13 per la variable desplaçament
