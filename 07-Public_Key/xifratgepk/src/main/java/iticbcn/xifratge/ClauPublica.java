@@ -14,4 +14,15 @@ public class ClauPublica {
         keyGen.initialize(2048);
         return keyGen.generateKeyPair();
     }
+    public byte[] xifraRSA(String msg, PublicKey clauPublica) throws Exception {
+        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+        cipher.init(Cipher.ENCRYPT_MODE, clauPublica);
+        return cipher.doFinal(msg.getBytes("UTF-8"));
+    }
+
+    public String desxifraRSA(byte[] msgXifrat, PrivateKey clauPrivada) throws Exception {
+        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+        cipher.init(Cipher.DECRYPT_MODE, clauPrivada);
+        return new String(cipher.doFinal(msgXifrat), "UTF-8");
+    }
 }
