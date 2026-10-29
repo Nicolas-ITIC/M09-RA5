@@ -12,7 +12,7 @@ public class AES {
     private static final String CLAU = "LGINNUUX6967";
 
     public static byte[] generaIv() {
-        byte[] ivBytes = new byte[MIDA_IV];
+        byte[] ivBytes = iv;
         new SecureRandom().nextBytes(ivBytes);
         return ivBytes;
     }
